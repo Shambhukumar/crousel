@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    &-head{
+      margin-bottom: 20px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-btn{
+        padding-bottom: 20px;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      div{
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(106, 149, 155);
+        padding: 10px 15px;
+        margin: 5px;
+      }
+      &-right,&-left{
+        
+          border: solid rgb(255, 255, 255);
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+      }
+      &-right{
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+      }
+      &-left{
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+    }
+    &-live{
+      width: 50%;
+      &-textLive{
+        padding: 5px 15px;
+        color: rgb(235, 231, 231);
+        border-radius: 5px;
+        background-color: rgb(196, 57, 57);
+        &-dot{
+          margin-right: 5px;
+          height: 15px;
+          width: 15px;
+          background-color: rgb(255, 254, 254);
+          border-radius: 70%;
+          display: inline-block;
+        }
+      }
+      &-upcomming{
+        margin-left: 15px;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      
+    }
+}
+.Carousel{
+  overflow: hidden;
+        display: flex;
+        width: 80%;
+        padding: 20px;
+        justify-content: space-between;
+      &-active{
+          animation-name: slidein;
+          animation-duration: 1s;
+          transition: 1s;
+      }
+}
+@keyframes slidein {
+    from {
+      transform: translateX(270%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
